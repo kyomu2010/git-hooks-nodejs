@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/kyomu2010/git-hooks-nodejs#readme",
   "devDependencies": {
-    "jest": "^27.3.1"
-  }
+    "jest": "^27.3.1",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "test"
+  ]
 }
