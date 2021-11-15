@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/**"
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,15 @@
   },
   "homepage": "https://github.com/kyomu2010/git-hooks-nodejs#readme",
   "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "husky": "^4.3.8",
     "jest": "^27.3.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm run lint && npm test"
     }
   }
 }
